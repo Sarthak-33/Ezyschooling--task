@@ -15,11 +15,13 @@ const Home = () => {
     console.log(items)
     setItems(items);
   }
+//   we recieve an array of objects from the API
 
 
   return (
     <div>
     <h3 class="home_header">Go through our list of articles</h3>
+//     using map to iterate over array of objects and Router Links to set links to posts.
       {items.map(item => (
         <Link to={`/Home/${item.id}`}><h4 className="list" key={item.id}>{item.id}.) {item.title}</h4></Link>
       ))}
