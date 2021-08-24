@@ -1,0 +1,24 @@
+#title {
+  text-transform: capitalize;
+  text-align: center;
+}
+.look {
+  background-color: burlywood;
+  max-width: 100%;
+  height: auto;
+}
+.comm {
+  text-align: left;
+  text-transform: capitalize;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.comtxt {
+  text-align: left;
+  padding-left: 50px;
+}
+.author {
+  border: 2px solid wheat;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}

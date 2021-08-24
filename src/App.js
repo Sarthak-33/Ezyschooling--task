@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Home from './Home';
+import Post from './Post';
+import { BrowserRouter as Router, Switch, Route} from 
+'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
 
 function App() {
   return (
+    
+    <Router>
+        <h1 id="header1">The School Genie <span>Where fertile minds find nourishing soils.</span></h1>
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/Home/:id" component={Post} />
+    </Switch>
     </div>
+    
+    </Router>
   );
 }
 

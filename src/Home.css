@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  padding-left: 40px;
+  text-transform: capitalize;
+}
+
+.home_header {
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+}
