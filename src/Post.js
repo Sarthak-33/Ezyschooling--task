@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card'
 import "./Post.css";
 
+// Using match to pass params and id for the post to be displayed
 const Post = ({ match}) => {
   useEffect(() => {
     fetchItem();
@@ -12,6 +13,7 @@ const Post = ({ match}) => {
   const [comments, setComments] = useState([]);
   const [authors, setAuthor] = useState([]);
   
+//   fetching data from API
   const fetchItem = async () => {
   const fetchItem = await fetch(`https://jsonplaceholder.typicode.com/posts/${match.params.id}`)
   const fetchComments = await fetch(`https://jsonplaceholder.typicode.com/posts/${match.params.id}/comments`)
@@ -29,6 +31,7 @@ const Post = ({ match}) => {
   return (
     <>
     <div style={{padding: "5px 5px 5px 5px", height: "auto", maxWidth: "100%", minWidth:"500px" }}>
+//     using React-Bootstrap cards to display the post data
     <Card style={{width:'100%', alignItems: 'center', textAlign: 'left'}}>
     <Card.Body>
     <Card.Title id="title" style={{fontSize: "calc(20px + 2vmin)", textAlign:"center"}}>{item.title}</Card.Title>
