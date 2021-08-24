@@ -47,6 +47,7 @@ const Post = ({ match}) => {
       ))}
       <div className="author">
     <h4>About the author:</h4>
+// Since there was some ambiguity as to what data about the author should be displayed, I have tried providing his basic contact details as these are the ones any user will seek the most.
     <h5>{authors.name}</h5>
     <h5>Email: {authors.email}</h5>
     <h5>Contact: {authors.phone}</h5>
